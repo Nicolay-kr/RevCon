@@ -6,16 +6,57 @@
   box-sizing:border-box;
   font-family: 'Poppins', sans-serif;
 }
+.on{
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
 .banner
 {
   position: relative;
-  width: 100%;
+  width: 120%;
   height: 100vh;
-  background: #3475ca;
+  /* background: lightgrey; */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition:1s;
+  /* transform: rotateX(200px); */
+
 }
+.nav
+{
+  /* position: absolute; */
+  top:0;
+  left:100%;
+  width:0%;
+  height: 100vh;
+  background: black;
+  justify-content: center;
+  align-items: center;
+  /* transform: translateX(0); */
+  transition: 1s;
+}
+.nav .links{
+  box-sizing: border-box;
+  padding: 200px 120px 200px 120px;
+}
+
+.nav a{
+  font-size: 40px;
+  display:block;
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+.nav a:hover{
+  color:red;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+
 .banner img
 {
   position: absolute;
@@ -24,7 +65,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity:0.25;
+  opacity:0.5;
+  filter: grayscale(1) brightness(0.4) ;
+
 }
 .content
 {
@@ -34,13 +77,17 @@
 }
 .content h2
 {
-  color: #fff;
-  font-size: 60px;
+  /* color: #fff; */
+  color: black;
+  font-size: 50px;
+  opacity: 0.75;
 }
 .content p
 {
-  color: #fff;
+  /* color: #fff; */
+  color: black
   font-size: 18px;
+  opacity: 0.75;
 }
 header
 {
@@ -56,12 +103,14 @@ header
 }
 header .logo
 {
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
   font-size: 50px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1px;
+  color: black;
+  opacity: 0.75;
 }
 
 header .logo .name{
@@ -70,6 +119,8 @@ header .logo .name{
 header .logo .description{
   transform:translatey(-10px);
   font-size: 10px;
+  color: black;
+  opacity: 0.75;
 }
 header .toggle
 {
@@ -77,21 +128,41 @@ header .toggle
   width: 36px;
   height: 28px;
   background: url(toggle.png);
+  color: black;
   background-size: cover;
   cursor: pointer;
 }
+
+
+
 .about
 {
+  background :#162c3b;
   position: relative;
   width: 100%;
   display: flex;
+  overflow: hidden;
 }
 .about .contentBx
 {
   background: #162c3b;
   width: 50%;
   padding: 100px;
+  height: 70vh;
 }
+
+.about .contentBx h2{
+  /* padding-top:100px; */
+}
+.about .contentBx h2 ,
+.about .contentBx p {
+transform:translateX(-120%);
+transition:1s;
+opacity:0;
+flex
+}
+
+
 h2.heading
 {
   color: #fff;
@@ -109,18 +180,48 @@ p.text
 }
 .about .imgBx
 {
-  background: url(red.jpg);
+  background:#162c3b url(red.jpg);
   background-size: cover;
   background-position: center;
   width: 50%;
+  transform: translateX(100%);
+  transition: 0.5s;
 }
 
 .services
 {
+  position: relative;
   background: #12222d;
   padding: 100px;
   text-align: center;
+  z-index: -1;
 }
+.services>h2,
+.services>p{
+  position: relative;
+  top:-400px;
+  transition: 0.5s;
+  opacity: 0;
+}
+.services .container .serviceBx:nth-child(1) {
+  position: relative;
+  left:-400px;
+  opacity: 0 ;
+  transition: 1s;
+}
+.services .container .serviceBx:nth-child(2) {
+  position: relative;
+  bottom:-400px;
+  opacity: 0 ;
+  transition: 1s;
+}
+.services .container .serviceBx:nth-child(3) {
+  position: relative;
+  right:-400px;
+  opacity: 0 ;
+  transition: 1s;
+}
+
 .services .container
 {
   width: 100%;
@@ -141,6 +242,7 @@ p.text
   align-items: center;
   border-radius: 20px;
   perspective: 1000px;
+  z-index: 2;
 }
 .services .container .serviceBx img
 {
@@ -192,6 +294,7 @@ p.text
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* z-index: -11; */
 }
 .technology .contentBx
 {
@@ -613,7 +716,9 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
     width: 100%;
     min-height: 400px;
     text-align: center;
+
   }
+
   .services
   {
     padding: 50px;
@@ -691,4 +796,47 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   {
     margin-bottom: 20px;
   }
+}
+
+.about .contentBxScrol h2 ,
+.about .contentBxScrol p {
+  transform:translateX(0%);
+  transition: 1s;
+  opacity: 1;
+}
+.about .imgBxScrol{
+  transform: translateX(0%);
+  transition: 1s;
+}
+.menu{
+  transition-delay: 10s;
+  transition:1s;
+}
+.nav_active{
+  width: 30%;
+  transition: 1s;
+}
+.servicesScrol>h2,
+.servicesScrol>p{
+  top:0px;
+  opacity: 1;
+  transition: 1s;
+}
+.servicesScrol .container .serviceBx:nth-child(1) {
+  position: relative;
+  left:0px;
+  opacity: 1;
+  transition: 1s;
+}
+.servicesScrol .container .serviceBx:nth-child(2) {
+  position: relative;
+  bottom:0px;
+  opacity: 1;
+  transition: 1s;
+}
+.servicesScrol .container .serviceBx:nth-child(3) {
+  position: relative;
+  right:0px;
+  opacity: 1;
+  transition: 1s;
 }
