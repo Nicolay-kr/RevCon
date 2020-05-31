@@ -8,14 +8,14 @@ let nav = document.querySelector('.nav');
 let services = document.querySelector('.services')
 
 window.onscroll = function () {
-  if (window.pageYOffset > 200 && window.pageYOffset<1000) {
+  if (window.pageYOffset > 1000&& window.pageYOffset<2000) {
     a.classList.add('contentBxScrol');
     b.classList.add('imgBxScrol');
   } else {
     a.classList.remove('contentBxScrol');
     b.classList.remove('imgBxScrol');
   }
-  if (window.pageYOffset > 1000 && window.pageYOffset<2000) {
+  if (window.pageYOffset >200 && window.pageYOffset<1500) {
 
     services.classList.add('servicesScrol');
   } else {
