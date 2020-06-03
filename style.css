@@ -18,7 +18,7 @@ body{  background:#f3f3f3;}
 .banner
 {
   position: relative;
-  width: 120%;
+  width: 100%;
   height: 100vh;
   /* background: lightgrey; */
   display: flex;
@@ -68,8 +68,7 @@ html{
 }
 header
 {
-  position: absolute;
-  border: 1px solid white;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -80,6 +79,7 @@ header
   z-index: 5;
   background: white;
   opacity: 0.8;
+  box-shadow: 10px 0 10px 0 black;
 
 }
 header .logo
@@ -133,13 +133,14 @@ nav{
 header .toggle
 {
   display:none;
-  position: relative;
+  position: absolute;
   width: 36px;
   height: 28px;
   background: url(toggle.png);
   color: black;
   background-size: cover;
   cursor: pointer;
+  filter: invert(1);
 }
 .nav_toggle
 {
@@ -188,9 +189,11 @@ header .toggle
   width: 50%;
   padding: 100px;
   height: 70vh;
+
 }
 
 .about .contentBx h2{
+  margin-top: 100px;
   color:black;
   /* margin-bottom: 70px; */
 }
@@ -228,6 +231,22 @@ p.text
   /* transform: translateX(100%); */
   transition: 0.5s;
 }
+
+#my_map{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  flex-direction: column;
+}
+.my_map{
+  margin-left: auto;
+  margin-right: auto;
+}
+.my_map_mobile{
+  display:none;
+}
+
 
 .services
 {
@@ -283,7 +302,7 @@ p.text
   position: relative;
   background:#f3f3f3;
   width: 350px;
-  height: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -740,6 +759,52 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   max-width: 20px;
 }
 
+.about .contentBxScrol h2 ,
+.about .contentBxScrol p {
+  transform:translateX(0%);
+  transition: 1s;
+  opacity: 1;
+}
+.about .imgBxScrol{
+  /* transform: translateX(0%); */
+  transition: 1s;
+}
+.menu{
+  transition-delay: 10s;
+  transition:1s;
+}
+.nav_active{
+  width: 30%;
+  transition: 1s;
+}
+.servicesScrol>h2,
+.servicesScrol>p{
+  top:0px;
+  opacity: 1;
+  transition: 1s;
+}
+.servicesScrol .container .serviceBx:nth-child(1) {
+  position: relative;
+  left:0px;
+  opacity: 1;
+  transition: 1s;
+  z-index: 100;
+}
+
+.servicesScrol .container .serviceBx:nth-child(2) {
+  position: relative;
+  bottom:0px;
+  opacity: 1;
+  transition: 1s;
+}
+.servicesScrol .container .serviceBx:nth-child(3) {
+  position: relative;
+  right:0px;
+  opacity: 1;
+  transition: 1s;
+}
+
+
 @media (max-width: 991px)
 {
 
@@ -800,15 +865,14 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   }
   .services .container .serviceBx
   {
-    margin: 20px;
+    /* margin: 20px; */
   }
 
   .services .container .serviceBx
   {
     position: relative;
-    background: #fff;
-    width: 3000px;
-    height: 350px;
+    /* width: 3000px;
+    height: 350px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -867,48 +931,106 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
     margin-bottom: 20px;
   }
 }
+@media (max-width: 400px)
+{
+  body{
 
-.about .contentBxScrol h2 ,
-.about .contentBxScrol p {
-  transform:translateX(0%);
-  transition: 1s;
-  opacity: 1;
+  }
+  header
+  {
+
+    position: fixed;
+    z-index: 100;
+  }
+
+  header .logo
+  {
+    font-size: 25px;
+
+  }
+  header .logo .description
+  {
+    color: black;
+    width: 100px;
+    margin-top: 10px;
+
+  }
+  nav{
+    display:none;
+  }
+  header .toggle{
+    display:block;
+    left:280px;
+    top:40px;
+  }
+
+  .about .contentBx h2{
+    margin-top: 20px;
+
+  }
+
+  .my_map_mobile
+  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .my_map
+  {
+    display:none;
+  }
+
+  #contact .container{
+    display: none;
+  }
+
+  section.contact .container .contactForm
+  {
+    width: auto;
+  }
+/* Service*/
+.service .container{
+
 }
-.about .imgBxScrol{
-  /* transform: translateX(0%); */
-  transition: 1s;
+
+/.services .container .serviceBx
+{
+  background:#f3f3f3;
+  height: 200px;
 }
-.menu{
-  transition-delay: 10s;
-  transition:1s;
+.services .container .serviceBx:nth-child(1) {
+
+  left:-200;
+
+
 }
-.nav_active{
-  width: 30%;
-  transition: 1s;
+.services .container .serviceBx:nth-child(2) {
+  bottom: 0;
+  right: :-200;
+
 }
-.servicesScrol>h2,
-.servicesScrol>p{
-  top:0px;
-  opacity: 1;
-  transition: 1s;
+
+.services .container .serviceBx:nth-child(3) {
+  right: -200;
+
+
+
 }
+
+
 .servicesScrol .container .serviceBx:nth-child(1) {
-  position: relative;
-  left:50px;
-  opacity: 1;
-  transition: 1s;
-  z-index: 100;
-}
 
+  left:0px;
+
+}
 .servicesScrol .container .serviceBx:nth-child(2) {
-  position: relative;
-  bottom:0px;
-  opacity: 1;
-  transition: 1s;
+  right: :0px;
+
 }
 .servicesScrol .container .serviceBx:nth-child(3) {
-  position: relative;
-  right:50px;
-  opacity: 1;
-  transition: 1s;
+  left: :0px;
+
+}
+
 }
