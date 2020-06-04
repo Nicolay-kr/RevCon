@@ -14,6 +14,7 @@ body{  background:#f3f3f3;}
   width: 100%;
   display: flex;
   overflow: hidden;
+  position: relative;
 }
 .banner
 {
@@ -80,6 +81,7 @@ header
   background: white;
   opacity: 0.8;
   box-shadow: 10px 0 10px 0 black;
+  z-index: 2;
 
 }
 header .logo
@@ -142,33 +144,38 @@ header .toggle
   cursor: pointer;
   filter: invert(1);
 }
-.nav_toggle
+.nav_toggle_off
 {
   display:none;
-  top:0;
-  left:100%;
-  width:0%;
-  height: 100vh;
-  background:black;
+  position: absolute;
+  top:150px;
+  left: 0;
+  width:100%;
+  height: 50vh;
+  background:lightgrey;
   justify-content: center;
   align-items: center;
-  /* transform: translateX(0); */
+
+
   transition: 1s;
 }
-.nav .links{
-  box-sizing: border-box;
-  padding: 200px 120px 200px 120px;
+
+.nav_toggle_on
+{
+  display:block;
+  position: absolute;
 }
 
-.nav a{
+.nav_toggle_off a{
+  padding-left: 35px;
   font-size: 40px;
   display:block;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: 1s;
 }
-.nav a:hover{
-  color:red;
+.nav_toggle_off a:hover{
+  color:#b65f26;
 }
 
 
@@ -805,7 +812,7 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
 }
 
 
-@media (max-width: 991px)
+@media (max-width: 1180px)
 {
 
   h2.heading
@@ -840,6 +847,14 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   {
     font-size: 16px;
   }
+  nav{
+    display:none;
+  }
+  header .toggle{
+    display:block;
+    left:600px;
+    top:50px;
+  }
   .about
   {
     flex-direction: column;
@@ -851,7 +866,22 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
     width: 100%;
     min-height: 400px;
     text-align: center;
+  }
 
+  .about .contentBx
+  {
+    height: 50vh;
+  }
+
+  #my_map{
+    height: 500px
+  }
+  .my_map
+  {
+    width: auto;
+    transform: scale(0.5);
+    margin-left: -150px;
+    margin-right:0;
   }
 
   .services
@@ -876,8 +906,6 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
     display: flex;
     justify-content: center;
     align-items: center;
-
-
   }
 
 
@@ -920,6 +948,23 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   {
     padding: 50px;
   }
+  section.contact {
+    min-height:800px;
+  }
+
+  section.contact .container{
+    /* display: none; */
+    min-width: 900px;
+    width: auto;
+    height:400px;
+    pa
+
+  }
+  section.contact .container .contactinfo
+  {
+    width:300px;
+    margin-left: 80px;
+  }
   .footer
   {
     padding: 20px 50px;
@@ -961,9 +1006,13 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   header .toggle{
     display:block;
     left:280px;
-    top:40px;
+    top:50px;
   }
 
+  .about .contentBx
+  {
+    height: 80vh;
+  }
   .about .contentBx h2{
     margin-top: 20px;
 

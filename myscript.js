@@ -3,12 +3,12 @@
 let a = document.querySelector('.contentBx');
 let b = document.querySelector('.imgBx');
 let toggle = document.querySelector('.toggle');
-let banner = document.querySelector('.banner');
-let nav = document.querySelector('.nav');
+let nav_toggle_off = document.querySelector('.nav_toggle_off');
+// let nav = document.querySelector('.nav');
 let services = document.querySelector('.services')
 
 window.onscroll = function () {
-  if (window.pageYOffset > 1000&& window.pageYOffset<2000) {
+  if (window.pageYOffset > 1000 && window.pageYOffset<2500) {
     a.classList.add('contentBxScrol');
     b.classList.add('imgBxScrol');
   } else {
@@ -25,8 +25,7 @@ window.onscroll = function () {
 };
 
 toggle.onclick = function () {
-  // Добавьте код сюда
 
-  banner.classList.toggle('menu');
-  nav.classList.toggle('nav_active');
+  nav_toggle_off.classList.toggle('nav_toggle_on');
+  // nav.classList.toggle('nav_toggle_on');
 };
