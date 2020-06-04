@@ -638,7 +638,7 @@ section.contact .container .contactForm
   background: #fff;
   margin-left: 150px;
   padding-left: 250px;
-  width: calc(100% - 150px);
+  width: calc(100% - 250px);
   height: 100%;
   box-shadow: 0 50px 50px rgba(0,0,0,0.5);
 }
@@ -706,7 +706,7 @@ section.contact .container .contactForm .formBox .inputBox textarea:valid ~ span
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #ff568c;
+  color: #b65f26;
 }
 section.contact .container .contactForm .formBox .inputBox input[type="submit"]
 {
@@ -931,7 +931,7 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
     margin-bottom: 20px;
   }
 }
-@media (max-width: 400px)
+@media (max-width: 420px)
 {
   body{
 
@@ -981,14 +981,7 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
     display:none;
   }
 
-  #contact .container{
-    display: none;
-  }
 
-  section.contact .container .contactForm
-  {
-    width: auto;
-  }
 /* Service*/
 .service .container{
 
@@ -1028,9 +1021,63 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   right: :0px;
 
 }
-.servicesScrol .container .serviceBx:nth-child(3) {
+.servicesScrol .container .serviceBx:nth-child(3)
+{
   left: :0px;
 
 }
+section.contact
+{
+  background: #9db9d5;
+}
+section.contact .container{
+  /* display: none; */
+  min-width: 375px;
+  width: auto;
+  height:1100px;
+  margin: 0px;
 
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+section.contact .container .contactinfo
+{
+  width: auto;
+  position: relative;
+  margin: 0px auto;
+  padding-left: 70px;
+  padding-right: auto;
+  height:400px;
+  box-shadow:
+  0 20px 20px rgba(0, 0, 0, 0.2),
+  0 -20px 20px rgba(0, 0, 0, 0.2);
+}
+section.contact .container .contactForm
+{
+  position: relative;
+  margin:20px;
+  padding-left: 20px;
+  width:auto;
+  height:700px;
+}
+section.contact .container .contactForm .formBox
+{
+  flex-direction: column;
+}
+section.contact .container .contactForm .formBox .inputBox.w50
+{
+  width: 100%;
+  margin:20px;
+}
+section.contact .container .contactForm .formBox .inputBox.w100
+{
+  width: 100%;
+  margin:20px;
+}
+section.contact .container .contactForm .formBox .inputBox input[type="submit"]
+{
+  margin-left: 50px;
+  margin-right: auto;
+}
 }
