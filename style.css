@@ -180,79 +180,7 @@ header .toggle
 
 
 
-.about
-{
-  /* background :#162c3b; */
-  margin: 40px 0;
-  background:lightgrey;
-  position: relative;
-  width: 100%;
-  display: flex;
-  overflow: hidden;
-}
-.about .contentBx
-{
-  /* background: #162c3b; */
-  width: 50%;
-  padding: 100px;
-  height: 70vh;
 
-}
-
-.about .contentBx h2{
-  margin-top: 100px;
-  color:black;
-  /* margin-bottom: 70px; */
-}
-
-.about .contentBx p {
-transform:translateX(-120%);
-color:black;
-transition:1s;
-opacity:0;
-flex
-}
-
-
-h2.heading
-{
-  color: #fff;
-  font-size: 38px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-p.text
-{
-  color: #fff;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-.about .imgBx
-{
-  background:white url('buildings.jpeg');
-  background-size: cover;
-  background-position: center;
-  width: 50%;
-  /* transform: translateX(100%); */
-  transition: 0.5s;
-}
-
-#my_map{
-  display: flex;
-  width: 100%;
-  height: auto;
-  justify-content: center;
-  flex-direction: column;
-}
-.my_map{
-  margin-left: auto;
-  margin-right: auto;
-}
-.my_map_mobile{
-  display:none;
-}
 
 
 .services
@@ -309,7 +237,7 @@ p.text
   position: relative;
   background:#f3f3f3;
   width: 350px;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -354,6 +282,131 @@ background:#f3f3f3;
 .serviceBx:hover .front {transform: rotateY(180deg);}
 .serviceBx:hover .back {transform: rotateY(360deg);}
 
+.about
+{
+  /* background :#162c3b; */
+  margin: 40px 0;
+  background:lightgrey;
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.about .contentBx
+{
+  /* background: #162c3b; */
+  width: 50%;
+  padding: 100px 100px;
+  /* height: 70vh; */
+
+}
+
+.about .contentBx h2{
+  margin-top: 30px;
+  color:black;
+  /* margin-bottom: 70px; */
+}
+
+.about .contentBx p {
+transform:translateX(-120%);
+color:black;
+transition:1s;
+opacity:0;
+margin-bottom: 30px;
+}
+
+
+h2.heading
+{
+  color: #black;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+p.text
+{
+  color: black;
+  font-size:18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.about .imgBx
+{
+  background:white url('buildings.jpeg');
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  /* transform: translateX(100%); */
+  transition: 0.5s;
+}
+
+.team
+{
+  position: relative;
+  overflow: hidden;
+
+  /* background: #9db9d5;
+  background:#f3f2eb; */
+  background:#f3f3f3;
+
+
+  text-align: center;
+  z-index: 1;
+  margin: 70px 0;
+}
+
+.team .container
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.team .container .teamBx
+{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  /* overflow: hidden; */
+  z-index: 0;
+}
+.team .container .teamBx img
+{
+  /* position: absolute; */
+  width: 100%;
+  border: 10px solid white;
+  border-radius: 5%;
+  position: relative;
+}
+.team .container .teamBx h2
+{
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+#my_map{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  flex-direction: column;
+}
+.my_map{
+  margin-left: auto;
+  margin-right: auto;
+}
+.my_map_mobile{
+  display:none;
+}
 
 .technology
 {
@@ -391,6 +444,7 @@ background:#f3f3f3;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 40px;
+  overflow: hidden;
 }
 .client h2,
 .client p{
@@ -536,7 +590,7 @@ section.contact
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 120vh;
   background: #b65f26;
 }
 section.contact::before
@@ -553,16 +607,17 @@ section.contact .container
 {
   position: relative;
   min-width: 1100px;
-  min-height: 550px;
+  min-height: 740px;
   display: flex;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 section.contact .container .contactinfo
 {
-  position: absolute;
   top: 40px;
-  width: 350px;
+  position: absolute;
   height: calc(100% - 80px);
+  width: 350px;
+  height: auto;
   background: #b65f26;
   z-index: 1;
   padding: 40px;
@@ -587,6 +642,7 @@ section.contact .container .contactinfo .info li
   position: relative;
   list-style: none;
   display: flex;
+  flex-direction: column;
   margin: 20px 0;
   cursor: pointer;
   align-items: flex-start;
@@ -603,7 +659,7 @@ section.contact .container .contactinfo .info li span:nth-child(1) img
   opacity: 0.5;
 }
 
-section.contact .container .contactinfo .info li span:nth-child(2)
+section.contact .container .contactinfo .info li span
 {
   color: #fff;
   margin-left: 10px;
@@ -611,7 +667,7 @@ section.contact .container .contactinfo .info li span:nth-child(2)
   opacity: 0.5;
 }
 section.contact .container .contactinfo .info li:hover span:nth-child(1) img,
-section.contact .container .contactinfo .info li:hover span:nth-child(2)
+section.contact .container .contactinfo .info li:hover span
 {
   opacity: 1;
 }
@@ -810,6 +866,42 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   opacity: 1;
   transition: 1s;
 }
+/* .brand:nth-child(1){
+  position: relative;
+  left:1500px;
+  transition: 1s
+}
+.brand:nth-child(2){
+  position: relative;
+  left:300px;
+  transition: 1s
+}
+.brand:nth-child(3){
+  position: relative;
+  left:300px;
+  transition: 1s
+}
+.brand:nth-child(4){
+  position: relative;
+  left:300px;
+  transition: 1s
+}
+.brandScrol:nth-child(1){
+  left:0;
+  transition: 1s;
+}
+.brandScrol:nth-child(2){
+  left:0;
+  transition: 1s;
+}
+.brandScrol:nth-child(3){
+  left:0;
+  transition: 1s;
+}
+.brandScrol:nth-child(4){
+  left:0;
+  transition: 1s;
+} */
 
 
 @media (max-width: 1180px)
@@ -859,19 +951,17 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
   {
     flex-direction: column;
   }
-  .about .contentBx,
-  .about .imgBx
-  {
+  .about .contentBx, .about .imgBx {
     padding: 50px;
     width: 100%;
-    min-height: 400px;
+    min-height: 300px;
     text-align: center;
-  }
+}
 
-  .about .contentBx
+  /* .about .contentBx
   {
     height: 50vh;
-  }
+  } */
 
   #my_map{
     height: 500px
@@ -1011,23 +1101,34 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
 
   .about .contentBx
   {
-    height: 80vh;
+    /* height: 100vh; */
   }
   .about .contentBx h2{
     margin-top: 20px;
 
   }
 
-  .my_map_mobile
+  #my_map {
+      height: 300px;
+  }
+
+ /* .my_map_mobile
   {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
+
+  /* .my_map
+  {
+    display:none;
+  } */
 
   .my_map
   {
-    display:none;
+    width: auto;
+    transform: scale(0.25);
+    margin-right:0;
   }
 
 
@@ -1077,13 +1178,14 @@ section.contact .container .contactForm .formBox .inputBox input[type="submit"]:
 }
 section.contact
 {
+  height:1500px;
   background: #9db9d5;
 }
 section.contact .container{
   /* display: none; */
   min-width: 375px;
   width: auto;
-  height:1100px;
+  height:400px;
   margin: 0px;
 
   flex-direction: column;
@@ -1093,17 +1195,19 @@ section.contact .container{
 section.contact .container .contactinfo
 {
   width: auto;
+  top:-300px;
   position: relative;
   margin: 0px auto;
   padding-left: 70px;
   padding-right: auto;
-  height:400px;
+  height:600px;
   box-shadow:
   0 20px 20px rgba(0, 0, 0, 0.2),
   0 -20px 20px rgba(0, 0, 0, 0.2);
 }
 section.contact .container .contactForm
 {
+  top:-300px;
   position: relative;
   margin:20px;
   padding-left: 20px;
