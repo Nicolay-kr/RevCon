@@ -7,6 +7,8 @@ let nav_toggle_off = document.querySelector('.nav_toggle_off');
 // let nav = document.querySelector('.nav');
 let services = document.querySelector('.services')
 let brand = document.querySelector('.brand')
+// let serviceBx = document.querySelectorAll('.serviceBx')
+// let serviceBx = document.querySelector('.serviceBx')
 
 window.onscroll = function () {
   if (window.pageYOffset > 1000 && window.pageYOffset<2500) {
@@ -39,5 +41,17 @@ window.onscroll = function () {
 toggle.onclick = function () {
 
   nav_toggle_off.classList.toggle('nav_toggle_on');
+  toggle.classList.toggle('toggle_x');
   // nav.classList.toggle('nav_toggle_on');
 };
+
+  // for (let element of serviceBx){
+  //   element.onclick = function (){
+  //   element.classList.toggle('serviceBxTouch');
+  //   }
+  // }
+  // serviceBx.onclick = function () {
+
+    // serviceBx.classList.toggle('serviceBx:hover');
+    // nav.classList.toggle('nav_toggle_on');
+  // };
