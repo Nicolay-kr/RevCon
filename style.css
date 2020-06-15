@@ -492,12 +492,15 @@ background:#f3f3f3;
 
 }
 .popup_body{
+  position: relative;
   min-height: 100%;
   display: flex;align-items: center;
   justify-content: center;
   padding: 110px 10px;
 }
 .popup_content{
+  position: absolute;
+  top:40px;
   background-color: white;
   color: black;
   max-width: 800px;
