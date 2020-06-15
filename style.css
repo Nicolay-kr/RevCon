@@ -1280,6 +1280,11 @@ margin-top: 50%;
   #my_map{
     height: 500px
   }
+  #my_map h2{
+    position: relative;
+    top:150px;
+  }
+
   .my_map
   {
     width: auto;
@@ -1473,6 +1478,11 @@ margin-top: 50%;
 
   #my_map {
       height: 300px;
+  }
+  
+  #my_map h2{
+    position: relative;
+    top:250px;
   }
 
  /* .my_map_mobile
