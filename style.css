@@ -421,7 +421,7 @@ nav{
   justify-content: center;
   align-items: center;
   transition: 1s;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 10px;
 }
 .front {
