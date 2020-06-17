@@ -932,6 +932,7 @@ section.contact .container
   min-width: 1100px;
   min-height: 740px;
   display: flex;
+
   /* z-index: 1000; */
 }
 section.contact .container .contactinfo
@@ -1617,6 +1618,7 @@ section.contact
 {
   height:1500px;
   background: #9db9d5;
+  align-items: flex-start;
 }
 section.contact .container{
   /* display: none; */
@@ -1624,16 +1626,14 @@ section.contact .container{
   width: auto;
   height:400px;
   margin: 0px;
-
-  flex-direction: column;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 section.contact .container .contactinfo
 {
-  width: auto;
-  -webkit-top:-300px;
-  top:-300px;
+  width: 100%;
+  /* -webkit-top:-300px;
+  top:-300px; */
   -webkit-position: relative;
   position: relative;
   margin: 0px auto;
@@ -1646,13 +1646,13 @@ section.contact .container .contactinfo
 }
 section.contact .container .contactForm
 {
-  -webkit-top:-300px;
-  top:-300px;
+  /* -webkit-top:-300px;
+  top:-300px; */
   -webkit-position: relative;
   position: relative;
   margin:20px;
   padding-left: 20px;
-  width:auto;
+  width:100%;
   height:700px;
 }
 section.contact .container .contactForm .formBox
