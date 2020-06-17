@@ -1475,7 +1475,7 @@ margin-top: 50%;
   } */
   header .toggle {
       display: block;
-      left: 270px;
+      left: 280px;
       top: 50px;
       opacity: 1;
   }
@@ -1632,7 +1632,9 @@ section.contact .container{
 section.contact .container .contactinfo
 {
   width: auto;
+  -webkit-top:-300px;
   top:-300px;
+  -webkit-position: relative;
   position: relative;
   margin: 0px auto;
   padding-left: 70px;
@@ -1644,7 +1646,9 @@ section.contact .container .contactinfo
 }
 section.contact .container .contactForm
 {
+  -webkit-top:-300px;
   top:-300px;
+  -webkit-position: relative;
   position: relative;
   margin:20px;
   padding-left: 20px;
